@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation - Explore Taniti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">Logo</div>
+            <div class="nav-links" style="position: absolute; left: 50%; transform: translateX(-50%);">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="attractions.html">Attractions</a></li>
+                        <li><a href="accommodations.html">Accommodations</a></li>
+                        <li><a href="transportation.html">Transportation</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="highlights">
+                <h2>Transportation Options</h2>
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="bus">Bus</button>
+                    <button class="tab-button" data-tab="car-sharing">Car Sharing</button>
+                    <button class="tab-button" data-tab="car-renting">Car Renting</button>
+                </div>
+                <div class="tab-content active" id="bus">
+                    <div class="box large">Bus Transportation Information</div>
+                </div>
+                <div class="tab-content" id="car-sharing">
+                    <div class="box large">Car Sharing Information</div>
+                </div>
+                <div class="tab-content" id="car-renting">
+                    <div class="box large">Car Renting Information</div>
+                </div>
+            </section>
+            <section class="hero">
+                <div class="map">
+                    MAP
+                    <p>Map trail details and information is based on transportation option selected</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="contact-info">
+                <p>Email: info@exploretaniti.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="feedback-form">
+                <div class="rate-us-container">
+                    <span class="rate-us-text">Rate us!</span>
+                    <div class="star-rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="feedback-popup" class="feedback-popup" style="display: none;">
+        <div class="feedback-content">
+            <h3>Feedback</h3>
+            <form class="additional-feedback">
+                <textarea placeholder="Your feedback" style="width: 100%; height: 100px;"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.star').forEach(star => {
+            star.addEventListener('click', function() {
+                document.getElementById('feedback-popup').style.display = 'block';
+            });
+        });
+        document.querySelector('.additional-feedback').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('feedback-popup').style.display = 'none';
+        });
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                button.classList.add('active');
+                document.getElementById(button.getAttribute('data-tab')).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

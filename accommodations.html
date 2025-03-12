@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodations - Explore Taniti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">Logo</div>
+            <div class="nav-links" style="position: absolute; left: 50%; transform: translateX(-50%);">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="attractions.html">Attractions</a></li>
+                        <li><a href="accommodations.html">Accommodations</a></li>
+                        <li><a href="transportation.html">Transportation</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="highlights">
+                <h2>Top Accommodations</h2>
+                <section class="hero">
+                    <div class="map">
+                        MAP
+                        <p>Suggested accommodations will be based on the map's focused area.</p>
+                    </div>
+                </section>
+                <div class="highlight-item">
+                    <div class="accommodation-image">Accommodation 1 Image</div>
+                    <div class="accommodation-details">Accommodation 1 Details</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="accommodation-image">Accommodation 2 Image</div>
+                    <div class="accommodation-details">Accommodation 2 Details</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="accommodation-image">Accommodation 3 Image</div>
+                    <div class="accommodation-details">Accommodation 3 Details</div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="contact-info">
+                <p>Email: info@exploretaniti.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="feedback-form">
+                <div class="rate-us-container">
+                    <span class="rate-us-text">Rate us!</span>
+                    <div class="star-rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="feedback-popup" class="feedback-popup" style="display: none;">
+        <div class="feedback-content">
+            <h3>Feedback</h3>
+            <form class="additional-feedback">
+                <textarea placeholder="Your feedback" style="width: 100%; height: 100px;"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.star').forEach(star => {
+            star.addEventListener('click', function() {
+                document.getElementById('feedback-popup').style.display = 'block';
+            });
+        });
+        document.querySelector('.additional-feedback').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('feedback-popup').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
