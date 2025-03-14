@@ -30,23 +30,25 @@
         <div class="container">
             <section class="faq-section">
                 <h2 style="text-align: center;">Frequently Asked Questions</h2>
-                <div class="faq-item question-1">
-                    <div class="box">
-                        Question 1: How do I contact you?
-                    </div>
-                    <div class="box" style="margin-top: 10px; height: 200px;">Answer: You can contact us via email at info@exploretaniti.com or phone at +123 456 7890.</div>
+                <div class="faq-item">
+                    <div class="faq-question">Question 1: How do I contact you?</div>
+                    <div class="faq-answer">Answer: You can contact us via email at info@exploretaniti.com or phone at +123 456 7890.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="box">Question 2: What is the best time to visit Taniti?</div>
+                    <div class="faq-question">Question 2: What is the best time to visit Taniti?</div>
+                    <div class="faq-answer">Answer: The best time to visit Taniti is from May to September when the weather is warm and dry.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="box">Question 3: How do I get around Taniti?</div>
+                    <div class="faq-question">Question 3: How do I get around Taniti?</div>
+                    <div class="faq-answer">Answer: You can get around Taniti by using public transportation, renting a car, or hiring a taxi.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="box">Question 4: What are the top attractions in Taniti?</div>
+                    <div class="faq-question">Question 4: What are the top attractions in Taniti?</div>
+                    <div class="faq-answer">Answer: The top attractions in Taniti include the Taniti National Park, the Taniti Museum, and the Taniti Beach.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="box">Question 5: Where can I stay in Taniti?</div>
+                    <div class="faq-question">Question 5: Where can I stay in Taniti?</div>
+                    <div class="faq-answer">Answer: You can stay in various accommodations in Taniti, including hotels, resorts, and vacation rentals.</div>
                 </div>
             </section>
         </div>
@@ -94,6 +96,22 @@
         document.querySelector('.additional-feedback').addEventListener('submit', function(event) {
             event.preventDefault();
             document.getElementById('feedback-popup').style.display = 'none';
+        });
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const openAnswer = document.querySelector('.faq-answer.open');
+                if (openAnswer && openAnswer !== answer) {
+                    openAnswer.classList.remove('open');
+                    openAnswer.style.maxHeight = null;
+                }
+                answer.classList.toggle('open');
+                if (answer.classList.contains('open')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                } else {
+                    answer.style.maxHeight = null;
+                }
+            });
         });
     </script>
 </body>
