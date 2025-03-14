@@ -361,3 +361,28 @@ footer {
 .tab-content.active {
     display: block;
 }
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.faq-answer.open {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
