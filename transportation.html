@@ -16,7 +16,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="attractions.html">Attractions</a></li>
                         <li><a href="accommodations.html">Accommodations</a></li>
-                        <li><a href="transportation.html">Transportation</a></li>
+                        <li><a href="transportation.html" class="active">Transportation</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </nav>
@@ -32,17 +32,25 @@
                 <h2>Transportation Options</h2>
                 <div class="tabs">
                     <button class="tab-button active" data-tab="bus">Bus</button>
-                    <button class="tab-button" data-tab="car-sharing">Car Sharing</button>
                     <button class="tab-button" data-tab="car-renting">Car Renting</button>
+                    <button class="tab-button" data-tab="walking">Walking</button>
                 </div>
                 <div class="tab-content active" id="bus">
-                    <div class="box large">Bus Transportation Information</div>
-                </div>
-                <div class="tab-content" id="car-sharing">
-                    <div class="box large">Car Sharing Information</div>
+                    <div class="box large">
+                        Public buses serve Taniti City from 5 a.m. to 11 p.m. daily. Private buses connect the rest of the island. 
+                        Taxis are also available in Taniti City for convenient travel.
+                    </div>
                 </div>
                 <div class="tab-content" id="car-renting">
-                    <div class="box large">Car Renting Information</div>
+                    <div class="box large">
+                        Rental cars are available near the airport from a local rental agency. Bikes and helmets can also be rented 
+                        from several vendors. Helmets are required by law.
+                    </div>
+                </div>
+                <div class="tab-content" id="walking">
+                    <div class="box large">
+                        Taniti City is flat and very walkable. Many tourists also explore Merriton Landing on foot, as it is easy to navigate.
+                    </div>
                 </div>
             </section>
             <section class="hero">
@@ -66,7 +74,7 @@
             </div>
             <div class="feedback-form">
                 <div class="rate-us-container">
-                    <span class="rate-us-text">Rate us!</span>
+                    <button class="feedback-button">Leave Feedback</button>
                     <div class="star-rating">
                         <span class="star" data-value="1">&#9733;</span>
                         <span class="star" data-value="2">&#9733;</span>
@@ -105,6 +113,9 @@
                 button.classList.add('active');
                 document.getElementById(button.getAttribute('data-tab')).classList.add('active');
             });
+        });
+        document.querySelector('.feedback-button').addEventListener('click', function() {
+            document.getElementById('feedback-popup').style.display = 'block';
         });
     </script>
 </body>

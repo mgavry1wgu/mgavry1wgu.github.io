@@ -13,7 +13,7 @@
             <div class="nav-links" style="position: absolute; left: 50%; transform: translateX(-50%);">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="attractions.html">Attractions</a></li>
                         <li><a href="accommodations.html">Accommodations</a></li>
                         <li><a href="transportation.html">Transportation</a></li>
@@ -34,25 +34,25 @@
             <section class="featured-activities">
                 <h2>Featured Activities</h2>
                 <div class="activity-item">
-                    <div class="box">Activity 1</div>
+                    <div class="box">Relax on the beaches of Yellow Leaf Bay.</div>
                 </div>
                 <div class="activity-item">
-                    <div class="box">Activity 2</div>
+                    <div class="box">Hike through the rainforest trails.</div>
                 </div>
                 <div class="activity-item">
-                    <div class="box">Activity 3</div>
+                    <div class="box">Visit the active volcano for a thrilling experience.</div>
                 </div>
             </section>
             <section class="highlights">
                 <h2>Highlights</h2>
                 <div class="highlight-item">
-                    <div class="box">Highlight 1</div>
+                    <div class="box">Enjoy local cuisine at Taniti's 10 diverse restaurants.</div>
                 </div>
                 <div class="highlight-item">
-                    <div class="box">Highlight 2</div>
+                    <div class="box">Stay at a variety of accommodations, from hostels to luxury resorts.</div>
                 </div>
                 <div class="highlight-item">
-                    <div class="box">Highlight 3</div>
+                    <div class="box">Explore Merriton Landing's pubs, galleries, and entertainment options.</div>
                 </div>
             </section>
         </div>
@@ -70,7 +70,7 @@
             </div>
             <div class="feedback-form">
                 <div class="rate-us-container">
-                    <span class="rate-us-text">Rate us!</span>
+                    <button class="feedback-button">Leave Feedback</button>
                     <div class="star-rating">
                         <span class="star" data-value="1">&#9733;</span>
                         <span class="star" data-value="2">&#9733;</span>
@@ -100,6 +100,9 @@
         document.querySelector('.additional-feedback').addEventListener('submit', function(event) {
             event.preventDefault();
             document.getElementById('feedback-popup').style.display = 'none';
+        });
+        document.querySelector('.feedback-button').addEventListener('click', function() {
+            document.getElementById('feedback-popup').style.display = 'block';
         });
     </script>
 </body>

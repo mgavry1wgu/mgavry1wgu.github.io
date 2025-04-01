@@ -14,7 +14,7 @@
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="attractions.html">Attractions</a></li>
+                        <li><a href="attractions.html" class="active">Attractions</a></li>
                         <li><a href="accommodations.html">Accommodations</a></li>
                         <li><a href="transportation.html">Transportation</a></li>
                         <li><a href="faq.html">FAQ</a></li>
@@ -31,20 +31,25 @@
             <section class="highlights">
                 <h2>Top Attractions</h2>
                 <div class="highlight-item">
-                    <div class="box">Attraction 1 Image</div>
-                    <div class="box">Attraction 1 Details</div>
+                    <div class="box">Beaches</div>
+                    <div class="box">Enjoy the white, sandy beaches that encircle Yellow Leaf Bay, perfect for relaxation and water activities.</div>
                 </div>
                 <div class="highlight-item">
-                    <div class="box">Attraction 2 Image</div>
-                    <div class="box">Attraction 2 Details</div>
+                    <div class="box">Rainforest</div>
+                    <div class="box">Explore the lush rainforest with hiking trails, zip-lining, and breathtaking views of Taniti's natural beauty.</div>
                 </div>
                 <div class="highlight-item">
-                    <div class="box">Attraction 3 Image</div>
-                    <div class="box">Attraction 3 Details</div>
+                    <div class="box">Volcano</div>
+                    <div class="box">Visit Taniti’s active volcano for a unique sightseeing experience and guided tours.</div>
                 </div>
-            </section>
-            <section class="hero">
-                <div class="map">MAP</div>
+                <div class="highlight-item">
+                    <div class="box">Chartered Fishing & Snorkeling</div>
+                    <div class="box">Enjoy chartered fishing tours or snorkeling in the crystal-clear waters around Taniti.</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="box">Local History Museum</div>
+                    <div class="box">Learn about Taniti's rich history and culture at the local history museum.</div>
+                </div>
             </section>
         </div>
     </main>
@@ -61,7 +66,7 @@
             </div>
             <div class="feedback-form">
                 <div class="rate-us-container">
-                    <span class="rate-us-text">Rate us!</span>
+                    <button class="feedback-button">Leave Feedback</button>
                     <div class="star-rating">
                         <span class="star" data-value="1">&#9733;</span>
                         <span class="star" data-value="2">&#9733;</span>
@@ -91,6 +96,9 @@
         document.querySelector('.additional-feedback').addEventListener('submit', function(event) {
             event.preventDefault();
             document.getElementById('feedback-popup').style.display = 'none';
+        });
+        document.querySelector('.feedback-button').addEventListener('click', function() {
+            document.getElementById('feedback-popup').style.display = 'block';
         });
     </script>
 </body>

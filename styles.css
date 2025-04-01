@@ -52,6 +52,22 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
+    position: relative;
+}
+
+header nav ul li a.active {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+header nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ffcc00;
 }
 
 header .search-bar {
@@ -166,6 +182,7 @@ main {
     margin: 1.5%;
     text-align: center;
     box-sizing: border-box;
+    vertical-align: top; /* Ensures boxes align at the top regardless of text content */
 }
 
 .highlight-item .box, .activity-item .box {
@@ -311,6 +328,27 @@ footer {
 
 .feedback-content button:hover {
     background-color: #777;
+}
+
+.feedback-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+}
+
+.feedback-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.feedback-button:active {
+    background-color: #777;
+    transform: scale(1);
 }
 
 .sidebar {

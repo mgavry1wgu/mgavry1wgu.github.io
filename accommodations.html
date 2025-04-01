@@ -15,7 +15,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="attractions.html">Attractions</a></li>
-                        <li><a href="accommodations.html">Accommodations</a></li>
+                        <li><a href="accommodations.html" class="active">Accommodations</a></li>
                         <li><a href="transportation.html">Transportation</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
@@ -37,16 +37,16 @@
                     </div>
                 </section>
                 <div class="highlight-item">
-                    <div class="accommodation-image">Accommodation 1 Image</div>
-                    <div class="accommodation-details">Accommodation 1 Details</div>
+                    <div class="accommodation-image">Ideal for a family of four, this suite includes two bedrooms, a kitchenette, and easy access to the beach.</div>
+                    <div class="accommodation-details">Family Suite</div>
                 </div>
                 <div class="highlight-item">
-                    <div class="accommodation-image">Accommodation 2 Image</div>
-                    <div class="accommodation-details">Accommodation 2 Details</div>
+                    <div class="accommodation-image">Taniti's largest resort offers luxury amenities, pools, fine dining, and family-friendly activities.</div>
+                    <div class="accommodation-details">Four-Star Resort</div>
                 </div>
                 <div class="highlight-item">
-                    <div class="accommodation-image">Accommodation 3 Image</div>
-                    <div class="accommodation-details">Accommodation 3 Details</div>
+                    <div class="accommodation-image">A cozy, family-owned hotel with personalized service, perfect for a relaxing stay.</div>
+                    <div class="accommodation-details">Family-Owned Hotel</div>
                 </div>
             </section>
         </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="feedback-form">
                 <div class="rate-us-container">
-                    <span class="rate-us-text">Rate us!</span>
+                    <button class="feedback-button">Leave Feedback</button>
                     <div class="star-rating">
                         <span class="star" data-value="1">&#9733;</span>
                         <span class="star" data-value="2">&#9733;</span>
@@ -94,6 +94,9 @@
         document.querySelector('.additional-feedback').addEventListener('submit', function(event) {
             event.preventDefault();
             document.getElementById('feedback-popup').style.display = 'none';
+        });
+        document.querySelector('.feedback-button').addEventListener('click', function() {
+            document.getElementById('feedback-popup').style.display = 'block';
         });
     </script>
 </body>
